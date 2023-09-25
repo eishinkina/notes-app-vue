@@ -1,6 +1,12 @@
 <template>
-  <div id="app">
-    hello world
+  <div class="wrapper">
+    <div class="wrapper-content">
+      <section>
+        <div class="container">
+          <h1>hello</h1>
+        </div>
+      </section>
+    </div>
   </div>
 </template>
 
@@ -9,13 +15,4 @@ export default {
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style></style>
