@@ -6,19 +6,9 @@
           <h1>{{ title }}</h1>
           <Message v-if="message" :message="message" />
           <!-- new notes -->
-          <NewNote :note="note" @addNote="addNote"/>
+          <NewNote :note="note" @addNote="addNote" />
           <!-- note list  -->
-          <div class="notes">
-            <div class="note" v-for="(note, i) in notes" :key="i">
-              <div class="note-header">
-                <h3>{{ note.title }}</h3>
-              </div>
-              <div class="note-body">
-                <p>{{ note.descr }}</p>
-              </div>
-              <span>{{ note.data }}</span>
-            </div>
-          </div>
+          <Notes :notes="notes"/>
         </div>
       </section>
     </div>
@@ -28,10 +18,12 @@
 <script>
 import Message from './components/Message.vue';
 import NewNote from './components/NewNote.vue';
+import Notes from './components/Notes.vue';
 export default {
   components: {
     Message,
     NewNote,
+    Notes
   },
   data() {
     return {

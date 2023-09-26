@@ -26,6 +26,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+textarea {
+    margin-bottom: 20px;
+}
 .new-note {
     text-align: center;
 }
