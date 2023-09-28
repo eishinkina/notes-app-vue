@@ -31,5 +31,6 @@ textarea {
 }
 .new-note {
     text-align: center;
+    margin-bottom: 20px;
 }
 </style>
