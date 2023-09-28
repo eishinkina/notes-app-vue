@@ -3,12 +3,14 @@
     <div class="wrapper-content">
       <section>
         <div class="container">
+          <!-- title -->
           <h1>{{ title }}</h1>
+          <!-- message -->
           <Message v-if="message" :message="message" />
           <!-- new notes -->
           <NewNote :note="note" @addNote="addNote" />
           <!-- note list  -->
-          <Notes :notes="notes"/>
+          <Notes :notes="notes" @remove="removeNote"/>
         </div>
       </section>
     </div>
@@ -68,6 +70,9 @@ export default {
       this.note.title = "";
       this.note.descr = "";
     },
+    removeNote(i) {
+      this.notes.splice(i, 1)
+    }
   },
 }
 </script>
